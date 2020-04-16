@@ -1,4 +1,3 @@
-import json
 
 print("Digite o número de Autores a serem apresentados")
 qtd = int(input())
@@ -14,9 +13,15 @@ while n < qtd:
 
     sobrenome=valores[1].upper().rstrip()
     nome=valores[0].capitalize()
-    if "da" or "de" or "das" or "dos" in valor1:
+    if "da" or "de" or "das" or "dos" in sobrenome:
         var_temp=sobrenome.replace("D","d")
         final=var_temp+","+" "+nome
+              
+       
+    elif "FILHO" or "FILHA" or "NETO" or "NETA" or "SOBRINHO" or "SOBRINHA" or "JUNIOR" in sobrenome:
+            var=sobrenome.upper()
+            final=var+","+" "+nome
+        
                
     else:
         final=var_temp+","+" "+nome
